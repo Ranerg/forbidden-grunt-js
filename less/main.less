@@ -1,0 +1,151 @@
+body{
+	margin: 0px;
+	padding:0px;
+	background: #e8ebed;
+}
+.clear{
+	cleat:both;
+}
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.box-sizing (@sizing: border-box) {
+	-moz-box-sizing: @sizing;
+    box-sizing: @sizing;
+    -webkit-box-sizing: @sizing;
+}
+
+#wrap{}
+#baner{
+	background: #41902e;
+	height: 45px;
+	border-bottom: 1px solid #1e346a;
+}
+
+
+#main{
+	height: 420px;
+	background-image: url("../images/main.png");
+
+	.content{
+		width:900px;
+		overflow: hidden;
+		margin: 0px auto;
+
+		#information{
+			width:600px;
+			
+			h1, h3{
+				  font-family: Calibri;
+				  font-weight: normal;
+				  
+				  color: #FFF;
+			}
+			h1{
+				font-size: 54px;
+				margin-top: 58px;
+			}
+			h3{
+				  font-size: 24px;
+				  margin-top: 6px;
+			}	
+
+		}
+
+		#aside{
+			width: 300px;
+			float: right;
+			#registation, #login{
+				padding-top: 20px;
+			}
+			form{
+				
+				
+				input{
+					.rounded-corners(5px);
+					display: block;
+					border: none;
+					color: #FFF;
+					font-family: Tahoma 14px;
+				}
+				input:not(:last-child){
+					margin-bottom: 12px;
+				}
+
+				input[type="submit"]{
+					box-shadow: 0px 2px 2px rgba(0,0,0,.1);
+					height: 38px;
+					padding: 0px 10px;
+					line-height: 38px;
+					background: #1197b8;
+				}
+				input[type="text"]{
+					opacity: 0.2;
+					height: 36px;
+					line-height: 36px;
+					padding: 0px 10px;
+					width: 300px;
+					.box-sizing();
+					background: #000;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+#footer{
+
+	width: 900px;
+	margin: 16px auto;
+	.avatars{
+		float:left;
+		margin-bottom: 20px;
+		.avatar:not(:last-child){
+			margin-right:10px;
+		}
+		.avatar{
+			padding: 5px;
+			display: block;
+			float: left;
+			width: 80px;
+			height: 80px;
+			.box-sizing();
+			.rounded-corners(5px);
+			background: #FFF;
+			box-shadow: 0px 1px 4px rgba(0,0,0,.2);
+		}
+	}
+
+
+
+	.information{
+		float: left;
+		padding-bottom: 14px;
+		width: 100%;
+		border-top: #cccccc 1px solid;
+		color:#7e7e7e;
+		padding-top:14px;
+		font-size: 12px;
+		font-family: Tahoma;
+		
+		p{
+			margin-bottom: 10px;
+		}
+
+		a{
+			@color: #375490;
+			color: @color;
+			text-decoration:none;
+			&:hover{
+				color: lighten(@color, 10%); 
+				text-decoration: underline;
+			}
+		}
+		}
+}
